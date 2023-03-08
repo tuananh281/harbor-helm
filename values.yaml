@@ -1,0 +1,1253 @@
+adminPassword: ''
+# chartmuseum:
+#   absoluteUrl: false
+#   affinity: {}
+#   allowOverwrite: true
+#   anonymousGet: false
+#   args: []
+#   automountServiceAccountToken: false
+#   chartPostFormFieldName: ''
+#   chartRepoName: chartsRepo
+#   command: []
+#   containerPorts:
+#     http: 9999
+#     https: 9443
+#   containerSecurityContext:
+#     enabled: true
+#     runAsNonRoot: true
+#     runAsUser: 1001
+#   contextPath: ''
+#   customLivenessProbe: {}
+#   customReadinessProbe: {}
+#   customStartupProbe: {}
+#   depth: 1
+#   disableApi: false
+#   disableMetrics: false
+#   disableStatefiles: false
+#   enabled: true
+#   extraEnvVars: []
+#   extraEnvVarsCM: ''
+#   extraEnvVarsSecret: ''
+#   extraVolumeMounts: []
+#   extraVolumes: []
+#   hostAliases: []
+#   image:
+#     debug: false
+#     digest: ''
+#     pullPolicy: IfNotPresent
+#     pullSecrets: []
+#     registry: docker.io
+#     repository: bitnami/chartmuseum
+#     tag: 0.15.0-debian-11-r76
+#   indexLimit: ''
+#   initContainers: []
+#   lifecycleHooks: {}
+#   livenessProbe:
+#     enabled: true
+#     failureThreshold: 6
+#     initialDelaySeconds: 20
+#     periodSeconds: 10
+#     successThreshold: 1
+#     timeoutSeconds: 5
+#   logJson: false
+#   maxStorageObjects: ''
+#   maxUploadSize: ''
+#   nodeAffinityPreset:
+#     key: ''
+#     type: ''
+#     values: []
+#   nodeSelector: {}
+#   podAffinityPreset: ''
+#   podAnnotations: {}
+#   podAntiAffinityPreset: soft
+#   podLabels: {}
+#   podSecurityContext:
+#     enabled: true
+#     fsGroup: 1001
+#   priorityClassName: ''
+#   provPostFormFieldName: ''
+#   readinessProbe:
+#     enabled: true
+#     failureThreshold: 6
+#     initialDelaySeconds: 20
+#     periodSeconds: 10
+#     successThreshold: 1
+#     timeoutSeconds: 5
+#   replicaCount: 1
+#   resources:
+#     limits: {}
+#     requests: {}
+#   schedulerName: ''
+#   service:
+#     ports:
+#       http: 80
+#       https: 443
+#   sidecars: []
+#   startupProbe:
+#     enabled: false
+#     failureThreshold: 15
+#     initialDelaySeconds: 5
+#     periodSeconds: 10
+#     successThreshold: 1
+#     timeoutSeconds: 1
+#   storageTimestampTolerance: 1s
+#   tls:
+#     existingSecret: ''
+#   tolerations: []
+#   topologySpreadConstraints: []
+#   updateStrategy:
+#     type: RollingUpdate
+#   useRedisCache: true
+clusterDomain: cluster.local
+commonAnnotations: {}
+commonLabels: {}
+core:
+  affinity: {}
+  args: []
+  automountServiceAccountToken: false
+  command: []
+  configOverwriteJson: ''
+  configOverwriteJsonSecret: ''
+  containerPorts:
+    http: 8080
+    https: 8443
+    metrics: 8001
+  containerSecurityContext:
+    enabled: true
+    runAsNonRoot: true
+    runAsUser: 1001
+  csrfKey: ''
+  customLivenessProbe: {}
+  customReadinessProbe: {}
+  customStartupProbe: {}
+  existingEnvVarsSecret: ''
+  existingSecret: ''
+  extraEnvVars: []
+  extraEnvVarsCM: ''
+  extraEnvVarsSecret: ''
+  extraVolumeMounts: []
+  extraVolumes: []
+  hostAliases: []
+  image:
+    debug: false
+    digest: ''
+    pullPolicy: IfNotPresent
+    pullSecrets: []
+    registry: docker.io
+    repository: bitnami/harbor-core
+    tag: 2.7.1-debian-11-r2
+  initContainers: []
+  lifecycleHooks: {}
+  livenessProbe:
+    enabled: true
+    failureThreshold: 6
+    initialDelaySeconds: 20
+    periodSeconds: 10
+    successThreshold: 1
+    timeoutSeconds: 5
+  nodeAffinityPreset:
+    key: ''
+    type: ''
+    values: []
+  nodeSelector: {}
+  podAffinityPreset: ''
+  podAnnotations: {}
+  podAntiAffinityPreset: soft
+  podLabels: {}
+  podSecurityContext:
+    enabled: true
+    fsGroup: 1001
+  priorityClassName: ''
+  readinessProbe:
+    enabled: true
+    failureThreshold: 6
+    initialDelaySeconds: 20
+    periodSeconds: 10
+    successThreshold: 1
+    timeoutSeconds: 5
+  replicaCount: 1
+  resources:
+    limits: {}
+    requests: {}
+  schedulerName: ''
+  secret: ''
+  secretKey: ''
+  secretName: ''
+  service:
+    ports:
+      http: 80
+      https: 443
+      metrics: 8001
+  sessionLifetime: ''
+  sidecars: []
+  startupProbe:
+    enabled: false
+    failureThreshold: 15
+    initialDelaySeconds: 5
+    periodSeconds: 10
+    successThreshold: 1
+    timeoutSeconds: 1
+  tls:
+    existingSecret: ''
+  tokenCert: ''
+  tokenKey: ''
+  tolerations: []
+  topologySpreadConstraints: []
+  uaaSecret: ''
+  updateStrategy:
+    type: RollingUpdate
+diagnosticMode:
+  args:
+    - infinity
+  command:
+    - sleep
+  enabled: false
+exporter:
+  affinity: {}
+  args: []
+  automountServiceAccountToken: false
+  command: []
+  containerPorts:
+    metrics: 8001
+  containerSecurityContext:
+    enabled: true
+    runAsNonRoot: true
+    runAsUser: 1001
+  customLivenessProbe: {}
+  customReadinessProbe: {}
+  customStartupProbe: {}
+  extraEnvVars: []
+  extraEnvVarsCM: ''
+  extraEnvVarsSecret: ''
+  extraVolumeMounts: []
+  extraVolumes: []
+  hostAliases: []
+  image:
+    debug: false
+    digest: ''
+    pullPolicy: IfNotPresent
+    pullSecrets: []
+    registry: docker.io
+    repository: bitnami/harbor-exporter
+    tag: 2.7.1-debian-11-r2
+  initContainers: []
+  lifecycleHooks: {}
+  livenessProbe:
+    enabled: true
+    failureThreshold: 6
+    initialDelaySeconds: 20
+    periodSeconds: 10
+    successThreshold: 1
+    timeoutSeconds: 5
+  nodeAffinityPreset:
+    key: ''
+    type: ''
+    values: []
+  nodeSelector: {}
+  podAffinityPreset: ''
+  podAnnotations: {}
+  podAntiAffinityPreset: soft
+  podLabels: {}
+  podSecurityContext:
+    enabled: true
+    fsGroup: 1001
+  priorityClassName: ''
+  readinessProbe:
+    enabled: true
+    failureThreshold: 6
+    initialDelaySeconds: 20
+    periodSeconds: 10
+    successThreshold: 1
+    timeoutSeconds: 5
+  replicaCount: 1
+  resources:
+    limits: {}
+    requests: {}
+  schedulerName: ''
+  service:
+    ports:
+      metrics: 8001
+  serviceAccountName: ''
+  sidecars: []
+  startupProbe:
+    enabled: false
+    failureThreshold: 15
+    initialDelaySeconds: 5
+    periodSeconds: 10
+    successThreshold: 1
+    timeoutSeconds: 1
+  tolerations: []
+  topologySpreadConstraints: []
+  updateStrategy:
+    type: RollingUpdate
+exposureType: proxy
+externalDatabase:
+  coreDatabase: ''
+  host: localhost
+  # notaryServerDatabase: ''
+  # notaryServerPassword: ''
+  # notaryServerUsername: ''
+  # notarySignerDatabase: ''
+  # notarySignerPassword: ''
+  # notarySignerUsername: ''
+  password: ''
+  port: 5432
+  sslmode: disable
+  user: bn_harbor
+externalRedis:
+  # chartmuseumDatabaseIndex: '3'
+  coreDatabaseIndex: '0'
+  host: localhost
+  # jobserviceDatabaseIndex: '1'
+  password: ''
+  port: 6379
+  registryDatabaseIndex: '2'
+  sentinel:
+    enabled: false
+    hosts: ''
+    masterSet: mymaster
+  # trivyAdapterDatabaseIndex: '5'
+externalURL: https://docker-web.inshasaki.com
+extraDeploy: []
+fullnameOverride: ''
+global:
+  imagePullSecrets: []
+  imageRegistry: ''
+  storageClass: ''
+  cattle:
+    systemProjectId: p-z4khd
+ingress:
+  core:
+    annotations:
+      ingress.kubernetes.io/proxy-body-size: '0'
+      ingress.kubernetes.io/ssl-redirect: 'true'
+      nginx.ingress.kubernetes.io/proxy-body-size: '0'
+      nginx.ingress.kubernetes.io/ssl-redirect: 'false'
+    apiVersion: ''
+    controller: default
+    extraHosts: []
+    extraPaths: []
+    extraRules: []
+    extraTls: []
+    hostname: docker-web.inshasaki.com
+    ingressClassName: ''
+    pathType: ImplementationSpecific
+    secrets: []
+    selfSigned: false
+    tls: false
+#   notary:
+#     annotations:
+#       ingress.kubernetes.io/proxy-body-size: '0'
+#       ingress.kubernetes.io/ssl-redirect: 'true'
+#       nginx.ingress.kubernetes.io/proxy-body-size: '0'
+#       nginx.ingress.kubernetes.io/ssl-redirect: 'true'
+#     apiVersion: ''
+#     controller: default
+#     extraHosts: []
+#     extraPaths: []
+#     extraRules: []
+#     extraTls: []
+#     hostname: notary.inshasaki.com
+#     ingressClassName: ''
+#     pathType: ImplementationSpecific
+#     secrets: []
+#     selfSigned: false
+#     tls: false
+# internalTLS:
+#   caBundleSecret: ''
+#   enabled: false
+# ipFamily:
+#   ipv4:
+#     enabled: true
+#   ipv6:
+#     enabled: true
+# jobservice:
+#   affinity: {}
+#   args: []
+#   automountServiceAccountToken: false
+#   command: []
+#   containerPorts:
+#     http: 8080
+#     https: 8443
+#     metrics: 8001
+#   containerSecurityContext:
+#     enabled: true
+#     runAsNonRoot: true
+#     runAsUser: 1001
+#   customLivenessProbe: {}
+#   customReadinessProbe: {}
+#   customStartupProbe: {}
+#   existingSecret: ''
+#   extraEnvVars: []
+#   extraEnvVarsCM: ''
+#   extraEnvVarsSecret: ''
+#   extraVolumeMounts: []
+#   extraVolumes: []
+#   hostAliases: []
+#   image:
+#     debug: false
+#     digest: ''
+#     pullPolicy: IfNotPresent
+#     pullSecrets: []
+#     registry: docker.io
+#     repository: bitnami/harbor-jobservice
+#     tag: 2.7.1-debian-11-r3
+#   initContainers: []
+#   jobLogger: file
+#   lifecycleHooks: {}
+#   livenessProbe:
+#     enabled: true
+#     failureThreshold: 6
+#     initialDelaySeconds: 20
+#     periodSeconds: 10
+#     successThreshold: 1
+#     timeoutSeconds: 5
+#   maxJobWorkers: 10
+#   nodeAffinityPreset:
+#     key: ''
+#     type: ''
+#     values: []
+#   nodeSelector: {}
+#   podAffinityPreset: ''
+#   podAnnotations: {}
+#   podAntiAffinityPreset: soft
+#   podLabels: {}
+#   podSecurityContext:
+#     enabled: true
+#     fsGroup: 1001
+#   priorityClassName: ''
+#   readinessProbe:
+#     enabled: true
+#     failureThreshold: 6
+#     initialDelaySeconds: 20
+#     periodSeconds: 10
+#     successThreshold: 1
+#     timeoutSeconds: 5
+#   redisNamespace: harbor_job_service_namespace
+#   replicaCount: 1
+#   resources:
+#     limits: {}
+#     requests: {}
+#   schedulerName: ''
+#   secret: ''
+#   service:
+#     ports:
+#       http: 80
+#       https: 443
+#       metrics: 8001
+#   sidecars: []
+#   startupProbe:
+#     enabled: false
+#     failureThreshold: 15
+#     initialDelaySeconds: 5
+#     periodSeconds: 10
+#     successThreshold: 1
+#     timeoutSeconds: 1
+#   tls:
+#     existingSecret: ''
+#   tolerations: []
+#   topologySpreadConstraints: []
+#   updateStrategy:
+#     type: RollingUpdate
+kubeVersion: ''
+logLevel: debug
+metrics:
+  enabled: false
+  path: /metrics
+  serviceMonitor:
+    enabled: false
+    honorLabels: false
+    interval: ''
+    jobLabel: ''
+    labels: {}
+    metricRelabelings: []
+    namespace: ''
+    relabelings: []
+    scrapeTimeout: ''
+    selector: {}
+nameOverride: ''
+nginx:
+  affinity: {}
+  args: []
+  behindReverseProxy: true
+  command: []
+  containerPorts:
+    http: 8080
+    https: 8443
+    # notary: 4443
+  containerSecurityContext:
+    enabled: true
+    runAsNonRoot: true
+    runAsUser: 1001
+  customLivenessProbe: {}
+  customReadinessProbe: {}
+  customStartupProbe: {}
+  extraEnvVars: []
+  extraEnvVarsCM: ''
+  extraEnvVarsSecret: ''
+  extraVolumeMounts: []
+  extraVolumes: []
+  hostAliases: []
+  image:
+    debug: false
+    digest: ''
+    pullPolicy: IfNotPresent
+    pullSecrets: []
+    registry: docker.io
+    repository: bitnami/nginx
+    tag: 1.23.3-debian-11-r29
+  initContainers: []
+  lifecycleHooks: {}
+  livenessProbe:
+    enabled: true
+    failureThreshold: 6
+    initialDelaySeconds: 20
+    periodSeconds: 10
+    successThreshold: 1
+    timeoutSeconds: 5
+  nodeAffinityPreset:
+    key: ''
+    type: ''
+    values: []
+  nodeSelector: {}
+  podAffinityPreset: ''
+  podAnnotations: {}
+  podAntiAffinityPreset: soft
+  podLabels: {}
+  podSecurityContext:
+    enabled: true
+    fsGroup: 1001
+  priorityClassName: ''
+  readinessProbe:
+    enabled: true
+    failureThreshold: 6
+    initialDelaySeconds: 20
+    periodSeconds: 10
+    successThreshold: 1
+    timeoutSeconds: 5
+  replicaCount: 1
+  resources:
+    limits: {}
+    requests: {}
+  schedulerName: ''
+  sidecars: []
+  startupProbe:
+    enabled: false
+    failureThreshold: 15
+    initialDelaySeconds: 10
+    periodSeconds: 10
+    successThreshold: 1
+    timeoutSeconds: 1
+  tls:
+    commonName: docker-web.inshasaki.com
+    enabled: true
+    existingSecret: inshasaki-com
+  tolerations: []
+  topologySpreadConstraints: []
+  updateStrategy:
+    type: RollingUpdate
+# notary:
+#   enabled: true
+#   secretName: ''
+#   server:
+#     affinity: {}
+#     args: []
+#     automountServiceAccountToken: false
+#     command: []
+#     containerPorts:
+#       server: 4443
+#     containerSecurityContext:
+#       enabled: true
+#       runAsNonRoot: true
+#       runAsUser: 1001
+#     customLivenessProbe: {}
+#     customReadinessProbe: {}
+#     customStartupProbe: {}
+#     extraEnvVars: []
+#     extraEnvVarsCM: ''
+#     extraEnvVarsSecret: ''
+#     extraVolumeMounts: []
+#     extraVolumes: []
+#     hostAliases: []
+#     image:
+#       debug: false
+#       digest: ''
+#       pullPolicy: IfNotPresent
+#       pullSecrets: []
+#       registry: docker.io
+#       repository: bitnami/harbor-notary-server
+#       tag: 2.7.1-debian-11-r3
+#     initContainers: []
+#     lifecycleHooks: {}
+#     livenessProbe:
+#       enabled: true
+#       failureThreshold: 6
+#       initialDelaySeconds: 20
+#       periodSeconds: 10
+#       successThreshold: 1
+#       timeoutSeconds: 5
+#     nodeAffinityPreset:
+#       key: ''
+#       type: ''
+#       values: []
+#     nodeSelector: {}
+#     podAffinityPreset: ''
+#     podAnnotations: {}
+#     podAntiAffinityPreset: soft
+#     podLabels: {}
+#     podSecurityContext:
+#       enabled: true
+#       fsGroup: 1001
+#     priorityClassName: ''
+#     readinessProbe:
+#       enabled: true
+#       failureThreshold: 6
+#       initialDelaySeconds: 20
+#       periodSeconds: 10
+#       successThreshold: 1
+#       timeoutSeconds: 5
+#     replicaCount: 1
+#     resources:
+#       limits: {}
+#       requests: {}
+#     schedulerName: ''
+#     sidecars: []
+#     startupProbe:
+#       enabled: false
+#       failureThreshold: 15
+#       initialDelaySeconds: 5
+#       periodSeconds: 10
+#       successThreshold: 1
+#       timeoutSeconds: 1
+#     tolerations: []
+#     topologySpreadConstraints: []
+#     updateStrategy:
+#       type: RollingUpdate
+#   service:
+#     ports:
+#       server: 4443
+#       signer: 7899
+#   signer:
+#     affinity: {}
+#     args: []
+#     automountServiceAccountToken: false
+#     command: []
+#     containerPorts:
+#       signer: 7899
+#     containerSecurityContext:
+#       enabled: true
+#       runAsNonRoot: true
+#       runAsUser: 1001
+#     customLivenessProbe: {}
+#     customReadinessProbe: {}
+#     customStartupProbe: {}
+#     extraEnvVars: []
+#     extraEnvVarsCM: ''
+#     extraEnvVarsSecret: ''
+#     extraVolumeMounts: []
+#     extraVolumes: []
+#     hostAliases: []
+#     image:
+#       debug: false
+#       digest: ''
+#       pullPolicy: IfNotPresent
+#       pullSecrets: []
+#       registry: docker.io
+#       repository: bitnami/harbor-notary-signer
+#       tag: 2.7.1-debian-11-r2
+#     initContainers: []
+#     lifecycleHooks: {}
+#     livenessProbe:
+#       enabled: true
+#       failureThreshold: 6
+#       initialDelaySeconds: 20
+#       periodSeconds: 10
+#       successThreshold: 1
+#       timeoutSeconds: 5
+#     nodeAffinityPreset:
+#       key: ''
+#       type: ''
+#       values: []
+#     nodeSelector: {}
+#     podAffinityPreset: ''
+#     podAnnotations: {}
+#     podAntiAffinityPreset: soft
+#     podLabels: {}
+#     podSecurityContext:
+#       enabled: true
+#       fsGroup: 1001
+#     priorityClassName: ''
+#     readinessProbe:
+#       enabled: true
+#       failureThreshold: 6
+#       initialDelaySeconds: 20
+#       periodSeconds: 10
+#       successThreshold: 1
+#       timeoutSeconds: 5
+#     replicaCount: 1
+#     resources:
+#       limits: {}
+#       requests: {}
+#     schedulerName: ''
+#     sidecars: []
+#     startupProbe:
+#       enabled: false
+#       failureThreshold: 15
+#       initialDelaySeconds: 5
+#       periodSeconds: 10
+#       successThreshold: 1
+#       timeoutSeconds: 1
+#     tolerations: []
+#     topologySpreadConstraints: []
+#     updateStrategy:
+#       type: RollingUpdate
+persistence:
+  enabled: true
+  imageChartStorage:
+    # azure:
+    #   accountkey: base64encodedaccountkey
+    #   accountname: accountname
+    #   container: containername
+    #   realm: ''
+    #   storagePrefix: /azure/harbor/charts
+    # caBundleSecret: ''
+    # disableredirect: false
+    # filesystem:
+    #   maxthreads: ''
+    #   rootdirectory: /storage
+    # gcs:
+    #   bucket: bucketname
+    #   chunksize: ''
+    #   encodedkey: ''
+    #   rootdirectory: ''
+    # oss:
+    #   accesskeyid: ''
+    #   accesskeysecret: ''
+    #   bucket: ''
+    #   chunksize: ''
+    #   encrypt: ''
+    #   endpoint: ''
+    #   internal: ''
+    #   region: ''
+    #   rootdirectory: ''
+    #   secretkey: ''
+    #   secure: ''
+    # s3:
+    #   accesskey: ''
+    #   bucket: bucketname
+    #   chunksize: ''
+    #   encrypt: ''
+    #   keyid: ''
+    #   region: us-west-1
+    #   regionendpoint: ''
+    #   rootdirectory: ''
+    #   secretkey: ''
+    #   secure: ''
+    #   skipverify: ''
+    #   sse: ''
+    #   storageClass: ''
+    #   v4auth: ''
+    # swift:
+    #   accesskey: ''
+    #   authurl: https://storage.myprovider.com/v3/auth
+    #   authversion: ''
+    #   chunksize: ''
+    #   container: ''
+    #   domain: ''
+    #   domainid: ''
+    #   endpointtype: ''
+    #   insecureskipverify: ''
+    #   password: ''
+    #   prefix: ''
+    #   region: ''
+    #   secretkey: ''
+    #   tempurlcontainerkey: ''
+    #   tempurlmethods: ''
+    #   tenant: ''
+    #   tenantid: ''
+    #   trustid: ''
+    #   username: ''
+    # type: filesystem
+  persistentVolumeClaim:
+    # chartmuseum:
+    #   accessModes:
+    #     - ReadWriteOnce
+    #   annotations: {}
+    #   existingClaim: ''
+    #   selector: {}
+    #   size: 5Gi
+    #   storageClass: ''
+    #   subPath: ''
+    # jobservice:
+    #   accessModes:
+    #     - ReadWriteOnce
+    #   annotations: {}
+    #   existingClaim: ''
+    #   scanData:
+    #     accessModes:
+    #       - ReadWriteOnce
+    #     annotations: {}
+    #     existingClaim: ''
+    #     selector: {}
+    #     size: 1Gi
+    #     storageClass: ''
+    #     subPath: ''
+    #   selector: {}
+    #   size: 1Gi
+    #   storageClass: ''
+    #   subPath: ''
+    registry:
+      accessModes:
+        - ReadWriteOnce
+      annotations: {}
+      existingClaim: ''
+      selector: {}
+      size: 5Gi
+      storageClass: ''
+      subPath: ''
+    # trivy:
+    #   accessModes:
+    #     - ReadWriteOnce
+    #   annotations: {}
+    #   selector: {}
+    #   size: 5Gi
+    #   storageClass: ''
+  resourcePolicy: keep
+portal:
+  affinity: {}
+  args: []
+  automountServiceAccountToken: false
+  command: []
+  containerPorts:
+    http: 8080
+    https: 8443
+  containerSecurityContext:
+    enabled: true
+    runAsNonRoot: true
+    runAsUser: 1001
+  customLivenessProbe: {}
+  customReadinessProbe: {}
+  customStartupProbe: {}
+  extraEnvVars: []
+  extraEnvVarsCM: ''
+  extraEnvVarsSecret: ''
+  extraVolumeMounts: []
+  extraVolumes: []
+  hostAliases: []
+  image:
+    debug: false
+    digest: ''
+    pullPolicy: IfNotPresent
+    pullSecrets: []
+    registry: docker.io
+    repository: bitnami/harbor-portal
+    tag: 2.7.1-debian-11-r2
+  initContainers: []
+  lifecycleHooks: {}
+  livenessProbe:
+    enabled: true
+    failureThreshold: 6
+    initialDelaySeconds: 20
+    periodSeconds: 10
+    successThreshold: 1
+    timeoutSeconds: 5
+  nodeAffinityPreset:
+    key: ''
+    type: ''
+    values: []
+  nodeSelector: {}
+  podAffinityPreset: ''
+  podAnnotations: {}
+  podAntiAffinityPreset: soft
+  podLabels: {}
+  podSecurityContext:
+    enabled: true
+    fsGroup: 1001
+  priorityClassName: ''
+  readinessProbe:
+    enabled: true
+    failureThreshold: 6
+    initialDelaySeconds: 20
+    periodSeconds: 10
+    successThreshold: 1
+    timeoutSeconds: 5
+  replicaCount: 1
+  resources:
+    limits: {}
+    requests: {}
+  schedulerName: ''
+  service:
+    ports:
+      http: 80
+      https: 443
+  sidecars: []
+  startupProbe:
+    enabled: false
+    failureThreshold: 15
+    initialDelaySeconds: 5
+    periodSeconds: 10
+    successThreshold: 1
+    timeoutSeconds: 1
+  tls:
+    existingSecret: ''
+  tolerations: []
+  topologySpreadConstraints: []
+  updateStrategy:
+    type: RollingUpdate
+postgresql:
+  architecture: standalone
+  auth:
+    enablePostgresUser: true
+    existingSecret: ''
+    postgresPassword: not-secure-database-password
+  enabled: true
+  image:
+    digest: ''
+    registry: docker.io
+    repository: bitnami/postgresql
+    tag: 13.10.0-debian-11-r4
+  primary:
+    extendedConfiguration: |
+      max_connections = 1024
+    initdb:
+      scripts:
+        # initial-notaryserver.sql: |
+        #   CREATE DATABASE notaryserver;
+        #   CREATE USER server;
+        #   alter user server with encrypted password 'password';
+        #   GRANT ALL PRIVILEGES ON DATABASE notaryserver TO server;
+        # initial-notarysigner.sql: |
+        #   CREATE DATABASE notarysigner;
+        #   CREATE USER signer;
+        #   alter user signer with encrypted password 'password';
+        #   GRANT ALL PRIVILEGES ON DATABASE notarysigner TO signer;
+        initial-registry.sql: |
+          CREATE DATABASE registry ENCODING 'UTF8';
+
+          \c registry;
+
+          CREATE TABLE schema_migrations(version bigint not null primary key,
+          dirty boolean not null);
+proxy:
+  components:
+    - core
+    # - jobservice
+    # - trivy
+  httpProxy: ''
+  httpsProxy: ''
+  noProxy: 127.0.0.1,localhost,.local,.internal
+redis:
+  architecture: standalone
+  auth:
+    enabled: false
+    existingSecret: ''
+    password: ''
+  enabled: true
+  sentinel:
+    enabled: false
+    masterSet: mymaster
+    service:
+      ports:
+        sentinel: 26379
+registry:
+  affinity: {}
+  automountServiceAccountToken: false
+  controller:
+    args: []
+    command: []
+    containerPorts:
+      http: 8080
+      https: 8443
+    containerSecurityContext:
+      enabled: true
+      runAsNonRoot: true
+      runAsUser: 1001
+    customLivenessProbe: {}
+    customReadinessProbe: {}
+    customStartupProbe: {}
+    extraEnvVars: []
+    extraEnvVarsCM: ''
+    extraEnvVarsSecret: ''
+    extraVolumeMounts: []
+    image:
+      debug: false
+      digest: ''
+      pullPolicy: IfNotPresent
+      pullSecrets: []
+      registry: docker.io
+      repository: bitnami/harbor-registryctl
+      tag: 2.7.1-debian-11-r3
+    lifecycleHooks: {}
+    livenessProbe:
+      enabled: true
+      failureThreshold: 6
+      initialDelaySeconds: 20
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 5
+    readinessProbe:
+      enabled: true
+      failureThreshold: 6
+      initialDelaySeconds: 20
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 5
+    resources:
+      limits: {}
+      requests: {}
+    service:
+      ports:
+        http: 8080
+        https: 8443
+    startupProbe:
+      enabled: false
+      failureThreshold: 15
+      initialDelaySeconds: 5
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 1
+  credentials:
+    htpasswd: >-
+      harbor_registry_user:$2y$10$9L4Tc0DJbFFMB6RdSCunrOpTHdwhid4ktBJmLD00bYgqkkGOvll3m
+    password: harbor_registry_password
+    username: harbor_registry_user
+  existingSecret: ''
+  extraVolumes: []
+  hostAliases: []
+  initContainers: []
+  middleware:
+    cloudFront:
+      baseurl: example.cloudfront.net
+      duration: 3000s
+      ipfilteredby: none
+      keypairid: KEYPAIRID
+      privateKeySecret: my-secret
+    enabled: false
+    type: cloudFront
+  nodeAffinityPreset:
+    key: ''
+    type: ''
+    values: []
+  nodeSelector: {}
+  podAffinityPreset: ''
+  podAnnotations: {}
+  podAntiAffinityPreset: soft
+  podLabels: {}
+  podSecurityContext:
+    enabled: true
+    fsGroup: 1001
+  priorityClassName: ''
+  relativeurls: false
+  replicaCount: 1
+  schedulerName: ''
+  secret: ''
+  server:
+    args: []
+    command: []
+    containerPorts:
+      debug: 5001
+      http: 5000
+      https: 5443
+      metrics: 8001
+    containerSecurityContext:
+      enabled: true
+      runAsNonRoot: true
+      runAsUser: 1001
+    customLivenessProbe: {}
+    customReadinessProbe: {}
+    customStartupProbe: {}
+    extraEnvVars: []
+    extraEnvVarsCM: ''
+    extraEnvVarsSecret: ''
+    extraVolumeMounts: []
+    image:
+      debug: false
+      digest: ''
+      pullPolicy: IfNotPresent
+      pullSecrets: []
+      registry: docker.io
+      repository: bitnami/harbor-registry
+      tag: 2.7.1-debian-11-r2
+    lifecycleHooks: {}
+    livenessProbe:
+      enabled: true
+      failureThreshold: 6
+      initialDelaySeconds: 20
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 5
+    readinessProbe:
+      enabled: true
+      failureThreshold: 6
+      initialDelaySeconds: 20
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 5
+    resources:
+      limits: {}
+      requests: {}
+    service:
+      ports:
+        http: 5000
+        https: 5443
+        metrics: 8001
+    startupProbe:
+      enabled: false
+      failureThreshold: 15
+      initialDelaySeconds: 5
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 1
+  sidecars: []
+  tls:
+    existingSecret: ''
+  tolerations: []
+  topologySpreadConstraints: []
+  updateStrategy:
+    type: RollingUpdate
+service:
+  annotations: {}
+  clusterIP: ''
+  externalTrafficPolicy: Cluster
+  extraPorts: []
+  loadBalancerIP: ''
+  loadBalancerSourceRanges: []
+  nodePorts:
+    http: ''
+    https: ''
+    # notary: ''
+  ports:
+    http: 80
+    https: 443
+    # notary: 4443
+  sessionAffinity: None
+  sessionAffinityConfig: {}
+  type: ClusterIP
+tracing:
+  attributes: {}
+  enabled: false
+  jaeger:
+    agentHost: ''
+    agentPort: ''
+    enabled: false
+    endpoint: ''
+    password: ''
+    username: ''
+  namespace: ''
+  otel:
+    compression: false
+    enabled: false
+    endpoint: hostname:4318
+    insecure: true
+    timeout: 10s
+    urlpath: /v1/traces
+  sampleRate: 1
+# trivy:
+#   affinity: {}
+#   args: []
+#   automountServiceAccountToken: false
+#   cacheDir: /bitnami/harbor-adapter-trivy/.cache
+#   command: []
+#   containerPorts:
+#     http: 8080
+#     https: 8443
+#   containerSecurityContext:
+#     enabled: true
+#     runAsNonRoot: true
+#     runAsUser: 1001
+#   customLivenessProbe: {}
+#   customReadinessProbe: {}
+#   customStartupProbe: {}
+#   debugMode: false
+#   enabled: true
+#   extraEnvVars: []
+#   extraEnvVarsCM: ''
+#   extraEnvVarsSecret: ''
+#   extraVolumeMounts: []
+#   extraVolumes: []
+#   gitHubToken: ''
+#   hostAliases: []
+#   ignoreUnfixed: false
+#   image:
+#     debug: false
+#     digest: ''
+#     pullPolicy: IfNotPresent
+#     pullSecrets: []
+#     registry: docker.io
+#     repository: bitnami/harbor-adapter-trivy
+#     tag: 2.7.1-debian-11-r2
+#   initContainers: []
+#   insecure: false
+#   lifecycleHooks: {}
+#   livenessProbe:
+#     enabled: true
+#     failureThreshold: 6
+#     initialDelaySeconds: 20
+#     periodSeconds: 10
+#     successThreshold: 1
+#     timeoutSeconds: 5
+#   nodeAffinityPreset:
+#     key: ''
+#     type: ''
+#     values: []
+#   nodeSelector: {}
+#   podAffinityPreset: ''
+#   podAnnotations: {}
+#   podAntiAffinityPreset: soft
+#   podLabels: {}
+#   podSecurityContext:
+#     enabled: true
+#     fsGroup: 1001
+#   priorityClassName: ''
+#   readinessProbe:
+#     enabled: true
+#     failureThreshold: 6
+#     initialDelaySeconds: 20
+#     periodSeconds: 10
+#     successThreshold: 1
+#     timeoutSeconds: 5
+#   replicaCount: 1
+#   resources:
+#     limits:
+#       cpu: 1
+#       memory: 1Gi
+#     requests:
+#       cpu: 200m
+#       memory: 512Mi
+#   schedulerName: ''
+#   service:
+#     ports:
+#       http: 8080
+#       https: 8443
+#   severity: UNKNOWN,LOW,MEDIUM,HIGH,CRITICAL
+#   sidecars: []
+#   skipUpdate: false
+#   startupProbe:
+#     enabled: false
+#     failureThreshold: 15
+#     initialDelaySeconds: 5
+#     periodSeconds: 10
+#     successThreshold: 1
+#     timeoutSeconds: 1
+#   tls:
+#     existingSecret: ''
+#   tolerations: []
+#   topologySpreadConstraints: []
+#   updateStrategy:
+#     type: RollingUpdate
+#   vulnType: os,library
+volumePermissions:
+  containerSecurityContext:
+    enabled: true
+    runAsUser: 0
+  enabled: false
+  image:
+    digest: ''
+    pullPolicy: IfNotPresent
+    pullSecrets: []
+    registry: docker.io
+    repository: bitnami/bitnami-shell
+    tag: 11-debian-11-r90
+  resources:
+    limits: {}
+    requests: {}
