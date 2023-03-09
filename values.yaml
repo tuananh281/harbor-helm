@@ -325,7 +325,71 @@ nginx:
     type: RollingUpdate
 persistence:
   enabled: true
-  imageChartStorage: ''
+  imageChartStorage:
+    azure:
+      accountkey: base64encodedaccountkey
+      accountname: accountname
+      container: containername
+      realm: ''
+      storagePrefix: /azure/harbor/charts
+    caBundleSecret: ''
+    disableredirect: false
+    filesystem:
+      maxthreads: ''
+      rootdirectory: /storage
+    gcs:
+      bucket: bucketname
+      chunksize: ''
+      encodedkey: ''
+      rootdirectory: ''
+    oss:
+      accesskeyid: ''
+      accesskeysecret: ''
+      bucket: ''
+      chunksize: ''
+      encrypt: ''
+      endpoint: ''
+      internal: ''
+      region: ''
+      rootdirectory: ''
+      secretkey: ''
+      secure: ''
+    s3:
+      accesskey: ''
+      bucket: bucketname
+      chunksize: ''
+      encrypt: ''
+      keyid: ''
+      region: us-west-1
+      regionendpoint: ''
+      rootdirectory: ''
+      secretkey: ''
+      secure: ''
+      skipverify: ''
+      sse: ''
+      storageClass: ''
+      v4auth: ''
+    swift:
+      accesskey: ''
+      authurl: https://storage.myprovider.com/v3/auth
+      authversion: ''
+      chunksize: ''
+      container: ''
+      domain: ''
+      domainid: ''
+      endpointtype: ''
+      insecureskipverify: ''
+      password: ''
+      prefix: ''
+      region: ''
+      secretkey: ''
+      tempurlcontainerkey: ''
+      tempurlmethods: ''
+      tenant: ''
+      tenantid: ''
+      trustid: ''
+      username: ''
+    type: filesystem
   persistentVolumeClaim:
     registry:
       accessModes:
