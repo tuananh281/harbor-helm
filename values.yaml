@@ -185,12 +185,6 @@ exposureType: proxy
 externalDatabase:
   coreDatabase: ''
   host: localhost
-  # notaryServerDatabase: ''
-  # notaryServerPassword: ''
-  # notaryServerUsername: ''
-  # notarySignerDatabase: ''
-  # notarySignerPassword: ''
-  # notarySignerUsername: ''
   password: ''
   port: 5432
   sslmode: disable
@@ -258,7 +252,6 @@ nginx:
   containerPorts:
     http: 8080
     https: 8443
-    # notary: 4443
   containerSecurityContext:
     enabled: true
     runAsNonRoot: true
@@ -332,7 +325,7 @@ nginx:
     type: RollingUpdate
 persistence:
   enabled: true
-  imageChartStorage:
+  imageChartStorage: ''
   persistentVolumeClaim:
     registry:
       accessModes:
