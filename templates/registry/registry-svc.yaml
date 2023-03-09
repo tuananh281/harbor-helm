@@ -13,7 +13,7 @@ metadata:
 spec:
   ports:
     - name: registry
-      port: {{ ternary .Values.registry.server.service.ports.https .Values.registry.server.service.ports.http .Values.internalTLS.enabled false }}
+      port: {{ ternary .Values.registry.server.service.ports.https .Values.registry.server.service.ports.http .Values.internalTLS.enabled true}}
     - name: controller
       port: {{ ternary .Values.registry.controller.service.ports.https .Values.registry.controller.service.ports.http .Values.internalTLS.enabled }}
     {{- if .Values.metrics.enabled }}
