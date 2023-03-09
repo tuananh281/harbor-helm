@@ -681,6 +681,8 @@ registry:
   topologySpreadConstraints: []
   updateStrategy:
     type: RollingUpdate
+  internalTLS:
+    enabled: false
 service:
   annotations: {}
   clusterIP: ''
