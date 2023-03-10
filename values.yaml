@@ -682,7 +682,7 @@ registry:
   updateStrategy:
     type: RollingUpdate
   internalTLS:
-    enabled: false
+    disabled: true
 service:
   annotations: {}
   clusterIP: ''
